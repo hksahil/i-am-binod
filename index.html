@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon" />
+    <meta name="description" content="" />
+
+    <title>BINOD Finder</title>
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="assets/tether/tether.min.css" />
+    <link rel="stylesheet" href="assets/theme/css/style.css" />
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css" />
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css" />
+    <style>
+        @media only screen and (min-width: 300px) and (max-width: 767px) {
+            /*If the screen size is atleast 300px wide, but no more than 767px */
+
+            .hid {
+                margin-left: 50px;
+                margin-top: 10px;
+            }
+
+
+
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            /* If the screen size is atleast 768px wide, but no more than 1023px */
+
+
+
+
+
+        }
+
+        @media only screen and (min-width: 1024px) {
+            /* If the screen size is over 1024px wide. */
+
+
+            .hid {
+                margin-left: 0px;
+
+                margin-top: 10px;
+            }
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="header4 cid-s762oka97J" id="header4-1">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="media-content col-md-10">
+                    <h1 class="mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style display-1">
+                        BINOD Finder
+                    </h1>
+
+                    <div class="mbr-text align-center mbr-white pb-3">
+                        <p class="mbr-text mbr-fonts-style display-5">
+                            Who is BINOD?<br />
+                        </p>
+                    </div>
+                    <div class="mbr-section-btn align-center bt">
+                        <a class="bt btn btn-md btn-primary display-4" onclick="fn()">Click here to see BINOD</a>
+                    </div>
+                </div>
+                <div class="mbr-figure pt-5">
+                    <video style="width: 60%;" class="videoc"></video>
+                </div>
+
+                <div style="display: none;" class="mbr-text align-center mbr-white pb-3 hid">
+                    <p class="mbr-text mbr-fonts-style display-5 hid" style="text-align: center;">
+                        BINOD is not a Person.<br />Its a force.<br />Its a feeling.<br />I
+                        am BINOD<br />You are BINOD<br /><b>EVERYONE IS BINOD!</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mbr-section article content10 cid-s76338gFdC" id="content10-2">
+        <div class="container">
+            <div class="inner-container" style="width: 66%;">
+                <hr class="line" style="width: 25%;" />
+                <div class="section-text align-center mbr-white mbr-fonts-style display-5">
+                    P.S:<br />We all asked who is BINOD.<br />But,no one asked How is
+                    BINOD.<br />Pls bros,be generous!<br />Talk to your HOMIES!<br />Mental
+                    health is important too<br />TAKE CARE
+                </div>
+                <hr class="line" style="width: 25%;" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Footer -->
+    <div class="container-fluid text-center" style="background: white;">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12">
+                <p class="inner-text content-text display-7" style="
+              color: black;
+              margin-top: 10px;
+              visibility: visible !important;
+            ">
+                    Made with
+                    <i style="color: red;" class="fa fa-heart" aria-hidden="true"></i>
+                    by <a href="https://hksahil.github.io/">Sahil</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".bt").click(function() {
+                $(".hid").show();
+            });
+        });
+
+        function fn() {
+            //add constraints object
+            var constraints = {
+                video: true,
+            };
+
+            //call getUserMedia, then the magic
+            navigator.mediaDevices
+                .getUserMedia(constraints)
+                .then(function(mediaStream) {
+                    var video = document.querySelector("video");
+                    video.srcObject = mediaStream;
+                    video.play();
+                })
+                .catch(function(err) {
+                    console.log("yikes, and err!" + err.message);
+                });
+        }
+
+    </script>
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+</body>
+
+</html>
